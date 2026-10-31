@@ -1,0 +1,138 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Campus.Eats.master.cs" Inherits="Campus.Eats.Campus_Eats" %>
+
+<!DOCTYPE html>
+
+<aspx>
+    <head runat="server">
+        <title></title>
+        <asp:ContentPlaceHolder ID="head" runat="server">
+        </asp:ContentPlaceHolder>
+    </head>
+    <body>
+        <form id="form1" runat="server">
+            <div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        <title>campus.eats</title>
+                        <link rel="preconnect" href="https://fonts.googleapis.com" />
+                        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+                        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+                        <link rel="stylesheet" href="css/style.css" />
+                        <style>
+                            .slide {
+                                position: relative;
+                                top: 90px;
+                                height: 200px;
+                                width: 200px;
+                                position: absolute;
+                                background-color: #fff;
+                                transition: 0.5s ease;
+                                transform: translateX(-300px);
+                            }
+
+                            .slide h1 {
+                                position: relative;
+                                right: 25px;
+                                color: #8000ff;
+                                font-weight: 800;
+                                text-align: right;
+                                padding-right: 30px;
+                                pointer-events: none;
+                            }
+
+                            .slide ul li {
+                                list-style: none;
+                                margin: 30px;
+                                margin-top: none;
+                            }
+
+                            .slide ul li a {
+                                color: #011a41;
+                                font-weight: 500;
+                                padding: 5px 0;
+                                display: block;
+                                text-transform: capitalize;
+                                text-decoration: none;
+                                transition: 0.2s ease-out;
+                                margin: -20px;
+                                width: 100px;
+                            }
+
+                            .slide ul li:hover a {
+                                color: #fff;
+                                background-color: #8000ff;
+                            }
+
+                            .slide ul li a i {
+                                width: 40px;
+                                text-align: center;
+                            }
+
+                            #hbm:checked ~ .slide {
+                                transform: translateX(-100px);
+                                box-shadow: 0 0 15px rgba(0,0,0,0.5);
+                            }
+
+                            #hbm {
+                                position: relative;
+                                left: 20px;
+                                bottom: 2px;
+                                display: none;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <header class="site-header">
+                            <div class="container">
+                                <label>
+                                    <input type="checkbox" name="" id="hbm">
+                                    <div class="slide">
+                                        <h1>Go to</h1>
+                                        <ul>
+                                            <li><a href="admin-dashboard.aspx">ADMIN</a></li>
+                                            <li><a href="staff-dashboard.aspx">STAFF</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="brand">
+                                        <span>🍴</span>
+                                        <span>campus<span class="brand-accent">.eats</span></span>
+                                    </div>
+                                </label>
+                                <button id="menu-toggle" class="mobile-only" aria-expanded="false" aria-controls="main-nav">☰ Menu</button>
+                                <nav id="main-nav" class="nav-links" role="navigation" aria-label="Main navigation">
+                                    <a href="home.aspx">Home</a>
+                                    <a href="menu.aspx">Menu</a>
+                                    <a href="dashboard.aspx">Dashboard</a>
+                                    <a href="orders.aspx">Orders</a>
+                                </nav>
+                                <div class="header-actions">
+                                    <a href="cart.aspx" class="header-pill">🛍️ Cart</a>
+                                </div>
+                            </div>
+                        </header>
+                </asp:ContentPlaceHolder>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                </asp:ContentPlaceHolder>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+
+                    <footer class="site-footer">
+                        <div class="container">
+                            <p>© 2026 campus.eats</p>
+                            <div class="footer-links">
+                                <a href="home.aspx">Home</a>
+                                <a href="login.aspx">Login</a>
+                                <a href="orders.aspx">Orders</a>
+                            </div>
+                        </div>
+                    </footer>
+    </body>
+</aspx>
+</asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
