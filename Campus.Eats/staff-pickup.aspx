@@ -10,7 +10,7 @@
                 <div class="eyebrow" style="margin-top: 0.6rem;">staff portal</div>
             </div>
             <nav class="sidebar-nav">
-                <a href="staff-dashboard.aspx">📋 Tasks</a>
+                 
                 <a href="staff-orders.aspx">🧾 Orders</a>
                 <a href="staff-pickup.aspx" class="active">📦 Pickup</a>
                 <a href="staff-profile.aspx">👤 Profile</a>

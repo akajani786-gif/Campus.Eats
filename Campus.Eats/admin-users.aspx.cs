@@ -35,7 +35,6 @@ namespace Campus.Eats
             {
                 gridfill();
             }
-
         }
 
         void getcon()
@@ -56,8 +55,7 @@ namespace Campus.Eats
 
         protected void GridView1_RowEditing(object sender, GridViewEditEventArgs e)
         {
-            GridView1.EditIndex = e.NewEditIndex;
-            gridfill();
+            
         }
 
         protected void GridView1_RowUpdating(object sender, GridViewUpdateEventArgs e)
@@ -95,6 +93,17 @@ namespace Campus.Eats
             CrystalReportViewer1.ReportSource = cr;
             cr.ExportToHttpResponse(ExportFormatType.PortableDocFormat,
             Response, true, "User_Report");
+        }
+
+        protected void GridView1_RowEditing1(object sender, GridViewEditEventArgs e)
+        {
+            GridView1.EditIndex = e.NewEditIndex;
+            gridfill();
+        }
+
+        protected void CrystalReportViewer1_Init(object sender, EventArgs e)
+        {
+
         }
     }
 }

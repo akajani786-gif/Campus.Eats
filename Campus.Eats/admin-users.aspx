@@ -15,12 +15,13 @@
                 <a href="admin-dashboard.aspx">📊 Overview</a>
                 <a href="admin-menu.aspx">🍽️ Menu</a>
                 <a href="admin-orders.aspx">📦 Orders</a>
-                <a href="admin-staff.aspx">👥 Staff</a>
+                 
                 <a href="admin-users.aspx" class="active">👥 Users</a>
                 <a href="settings.aspx">⚙️ Settings</a>
             </nav>
             <div class="sidebar-foot">
                 <strong>Signed in as</strong>
+                <CR:CrystalReportViewer ID="CrystalReportViewer1" runat="server" AutoDataBind="true" OnInit="CrystalReportViewer1_Init" />
                 <div class="mt-2">Admin Desk</div>
                 <div class="mt-2">+91 9999999999</div>
             </div>
@@ -31,12 +32,12 @@
                 <div>
                     <div class="eyebrow">People</div>
                     <h1 class="page-title">Users</h1>
-                    <asp:Button ID="Button1" runat="server" class="header-pill" Text="Generate report" OnClick="Button1_Click" />
+                    <asp:Button ID="Button1" runat="server" class="header-pill" Text="Generate the report" OnClick="Button1_Click" />
                 </div>
             </div>
 
             <div class="table-card">
-                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" OnRowCancelingEdit="GridView1_RowCancelingEdit">
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" OnRowEditing="GridView1_RowEditing1" OnRowUpdating="GridView1_RowUpdating" OnRowCancelingEdit="GridView1_RowCancelingEdit">
                     <Columns>
                         <asp:TemplateField HeaderText="Id">
                             <ItemTemplate>
@@ -110,5 +111,4 @@
             </div>
         </main>
     </div>
-    <CR:CrystalReportViewer ID="CrystalReportViewer1" runat="server" AutoDataBind="true" />
-</asp:Content>
+    </asp:Content>

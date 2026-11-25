@@ -29,24 +29,54 @@
             <div class="dashboard-grid mt-5">
                 <article class="stat-card">
                     <div class="badge badge-warm">Pending</div>
-                    <div class="value mt-3">18</div>
+                    <asp:Label ID="lblpending" runat="server" Text="0"></asp:Label>
                 </article>
                 <article class="stat-card">
                     <div class="badge badge-accent">Preparing</div>
-                    <div class="value mt-3">8</div>
+                    <asp:Label ID="lblpreparing" runat="server" Text="0"></asp:Label>
                 </article>
                 <article class="stat-card">
                     <div class="badge badge-success">Ready</div>
-                    <div class="value mt-3">6</div>
+                    <asp:Label ID="lblready" runat="server" Text="0"></asp:Label>
                 </article>
                 <article class="stat-card">
-                    <div class="badge badge-dark">Picked up</div>
-                    <div class="value mt-3">12</div>
+                    <div class="badge badge-dark">Collected</div>
+                    <asp:Label ID="lblcollected" runat="server" Text="0"></asp:Label>
                 </article>
             </div>
 
             <div class="table-card">
                 <div class="p-5 border-bottom">Recent orders</div>
+                <asp:DataList ID="DataList1" runat="server">
+    <ItemTemplate>
+        <article class="order-card">
+            <div class="order-card__token">
+                <asp:Label ID="Label6" runat="server" Text='<%# "#" + Eval("Id") %>'></asp:Label>
+            </div>
+            <div>
+                <asp:Image ID="Image1" class="order-card" Style="padding:0; height: 50px; width; 50px;" runat="server" ImageUrl='<%# Eval("image") %>' />
+            </div>
+            <div style="flex: 1;">
+                <h3 class="menu-card__title">
+                    <asp:Label ID="Label1" runat="server" Text='<%# Eval("name") +"   " %>'></asp:Label>
+                    x
+                    <asp:Label ID="Label2" runat="server" Text='<%# "   "+ Eval("quantity") %>'></asp:Label>
+                </h3>
+                <p class="menu-card__desc">
+                    <asp:Label ID="Label3" runat="server" Text='<%# "Pickup window: " + Eval("pickup_time") %>'></asp:Label>
+                </p>
+            </div>
+            <div class="text-right">
+                <strong>
+                    <asp:Label ID="Label4" runat="server" Text='<%# "₹" + Eval("t_price") %>'></asp:Label>
+                </strong>
+                <div class="badge badge-warm mt-2">
+                    <asp:Label ID="Label5" runat="server" Text='<%# Eval("status") %>'></asp:Label>
+                </div>
+            </div>
+        </article>
+    </ItemTemplate>
+</asp:DataList>
                 <asp:GridView ID="GridView1" runat="server"></asp:GridView>
 
                 <%--<table>

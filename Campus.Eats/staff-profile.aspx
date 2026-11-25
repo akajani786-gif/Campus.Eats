@@ -10,9 +10,9 @@
                 <div class="eyebrow" style="margin-top: 0.6rem;">staff portal</div>
             </div>
             <nav class="sidebar-nav">
-                <a href="staff-dashboard.aspx">📋 Tasks</a>
+                 
                 <a href="staff-orders.aspx">🧾 Orders</a>
-                <a href="staff-pickup.aspx">📦 Pickup</a>
+                 
                 <a href="staff-profile.aspx" class="active">👤 Profile</a>
             </nav>
             <div class="sidebar-foot">
@@ -27,7 +27,6 @@
             <h1 class="page-title">Staff profile</h1>
 
             <div class="auth-card mt-5">
-                <form>
                     <div class="field">
                         <label for="full-name">Full name</label>
                         <input id="full-name" type="text" value="Aditya Sharma" />
@@ -41,7 +40,6 @@
                         <input id="phone" type="tel" value="+91 9876543210" />
                     </div>
                     <button type="button" class="btn btn-primary btn-block">Save profile</button>
-                </form>
             </div>
         </main>
     </div>

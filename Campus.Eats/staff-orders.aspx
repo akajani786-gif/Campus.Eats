@@ -10,16 +10,11 @@
                 <div class="eyebrow" style="margin-top: 0.6rem;">staff portal</div>
             </div>
             <nav class="sidebar-nav">
-                <a href="staff-dashboard.aspx">📋 Tasks</a>
+                 
                 <a href="staff-orders.aspx" class="active">🧾 Orders</a>
-                <a href="staff-pickup.aspx">📦 Pickup</a>
+                 
                 <a href="staff-profile.aspx">👤 Profile</a>
             </nav>
-            <div class="sidebar-foot">
-                <strong>Shift summary</strong>
-                <div class="mt-2">Orders prepared: 19</div>
-                <div class="mt-2">Average wait: 7 min</div>
-            </div>
         </aside>
 
         <main class="dashboard-main">

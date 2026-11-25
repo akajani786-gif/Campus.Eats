@@ -1,5 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Campus.Eats.Master" AutoEventWireup="true" CodeBehind="admin-menu.aspx.cs" Inherits="Campus.Eats.admin_menu" %>
 
+<%@ Register assembly="CrystalDecisions.Web, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" namespace="CrystalDecisions.Web" tagprefix="CR" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
@@ -13,7 +15,7 @@
                 <a href="admin-dashboard.aspx">📊 Overview</a>
                 <a href="admin-menu.aspx" class="active">🍽️ Menu</a>
                 <a href="admin-orders.aspx">📦 Orders</a>
-                <a href="admin-staff.aspx">👥 Staff</a>
+
                 <a href="admin-users.aspx">👥 Users</a>
                 <a href="settings.aspx">⚙️ Settings</a>
             </nav>
@@ -30,11 +32,14 @@
                     <div class="eyebrow">Catalog</div>
                     <h1 class="page-title">Menu management</h1>
                 </div>
-                <asp:Button ID="Button1" runat="server" Text="+ Add item" class="btn btn-primary" OnClick="Button1_Click" />
+                <div>
+                    <asp:Button ID="Button2" runat="server" class="btn" Text="generate product report" OnClick="Button2_Click" />
+                    <asp:Button ID="Button1" runat="server" Text="+ Add item" class="btn btn-primary" OnClick="Button1_Click" />
+                </div>
                 <%--<button class="btn btn-primary">+ Add item</button>--%>
             </div>
 
-             <%-- <div class="card-list">
+            <%-- <div class="card-list">
                 <article class="menu-card">
                     <div class="menu-card__image hero-image" style="background-image: url('https://images.unsplash.com/photo-1516197370049-569c4eaba1d6?auto=format&fit=crop&w=800&q=80');"></div>
                     <div class="menu-card__body">
@@ -51,6 +56,7 @@
                 </article>--%>
 
             <%--<article class="menu-card">--%>
+            <CR:CrystalReportViewer ID="CrystalReportViewer1" runat="server" AutoDataBind="true" />
             <asp:DataList ID="DataList1" runat="server" RepeatDirection="Horizontal" RepeatColumns="3" OnItemCommand="DataList1_ItemCommand" CellSpacing="20">
                 <ItemTemplate>
                     <article class="menu-card">

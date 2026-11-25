@@ -12,7 +12,7 @@
             <nav class="sidebar-nav">
                 <a href="staff-dashboard.aspx" class="active">📋 Tasks</a>
                 <a href="staff-orders.aspx">🧾 Orders</a>
-                <a href="staff-pickup.aspx">📦 Pickup</a>
+                 
                 <a href="staff-profile.aspx">👤 Profile</a>
             </nav>
             <div class="sidebar-foot">
